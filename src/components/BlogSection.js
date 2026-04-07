@@ -2,7 +2,16 @@ import Image from "next/image";
 import Interactive from "@/components/animations/Interactive";
 import Reveal from "@/components/animations/Reveal";
 import StaggerGroup from "@/components/animations/StaggerGroup";
-import blogData from "../../../Blog.json"
+import blogData from "../../Blog.json"
+import Link from "next/link";
+import { MoveUpRight } from "lucide-react";
+
+const formatDate = (dateString) =>
+  new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(dateString))
 
 export default function RecentBlogSection() {
       const blogs = blogData.blogs || []
