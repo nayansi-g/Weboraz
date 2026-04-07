@@ -53,7 +53,7 @@ export default function RecentBlogSection() {
               </div>
               <Link
                 href={`/blog/${blog.slug}`}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#004B2D] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90"
               >
                 Read Article
                 <MoveUpRight className="h-4 w-4" />

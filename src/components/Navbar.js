@@ -72,7 +72,8 @@ export default function Navbar() {
             href="/projects"
             className="flex items-center gap-1 text-[17px] font-medium text-[#1f1f1f] transition hover:text-green-700"
           >
-            Projects <ChevronDown size={18} />
+            Projects 
+            {/* <ChevronDown size={18} /> */}
           </Link>
 
           <Link
@@ -98,9 +99,9 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="text-[17px] font-medium text-gray-100 bg-[#004B2D] hover:text-white rounded-full px-5 py-2.5 transition"
+            className="text-[17px] font-medium text-white bg-[#004B2D]  hover:text-white rounded-full px-5 py-2.5 transition"
           >
-            Get Started
+            Book a Free Demo
           </Link>
         </nav>
 
