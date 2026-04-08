@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Pritika Jaiswal",
+    name: "Pritika Mathur",
     role: "Co-Founder & Design Lead",
     image: "/Pritika.jpeg",
   },
