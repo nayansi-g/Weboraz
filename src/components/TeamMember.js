@@ -12,19 +12,19 @@ const teamMembers = [
   {
     id: 1,
     name: "Nayansi Gupta",
-    role: "Founder & Full Stack Developer",
+    role: "Founder & Web Strategy",
     image: "/Nayansi_Gupta.png",
   },
   {
     id: 2,
     name: "Pritika Jaiswal",
-    role: "Co-Founder & Marketing Head",
+    role: "Co-Founder & Design Lead",
     image: "/Pritika.jpeg",
   },
   {
     id: 3,
     name: "Satyam Gupta  ",
-    role: "Digital Media Manager",
+    role: "Head of Development",
     image: "/Satyam_Gupta.png",
   },
   
@@ -75,7 +75,7 @@ export default function TeamMemberSection() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-between  ">
           <div className="flex items-center gap-3 pt-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#003f2d] sm:text-xs">
-              Team Member
+              Weboraz Team
             </span>
             <div className="relative h-[2px] w-12 bg-[#003f2d]">
               <span className="absolute right-0 top-1/2 h-[7px] w-[7px] -translate-y-1/2 rounded-full bg-[#003f2d]" />
@@ -84,39 +84,17 @@ export default function TeamMemberSection() {
 
           <div className="">
             <h2 className="text-4xl font-bold uppercase leading-[0.95] tracking-[-0.04em] text-black sm:text-5xl md:text-6xl lg:text-[72px]">
-              Our Creative
-              
-              Team 
+              The People
+              <br />
+              Building Weboraz
             </h2>
           </div>
-
-          {/* <div className="flex items-center gap-3 lg:pt-2">
-            <m.button
-              onClick={handlePrev}
-              aria-label="Previous"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ded45a] text-black transition hover:scale-105"
-              whileTap={tapPress}
-              whileHover={{ scale: 1.05 }}
-            >
-              <ArrowLeft size={20} />
-            </m.button>
-
-            <m.button
-              onClick={handleNext}
-              aria-label="Next"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#004b2d] text-white transition hover:scale-105"
-              whileTap={tapPress}
-              whileHover={{ scale: 1.05 }}
-            >
-              <ArrowRight size={20} />
-            </m.button>
-          </div> */}
         </div>
 
         {/* Cards */}
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {visibleMembers.map((member) => (
+            {teamMembers.map((member) => (
               <m.div
                 key={`${currentIndex}-${member.id}`}
                 className="group relative"
@@ -128,7 +106,7 @@ export default function TeamMemberSection() {
               >
                 <Interactive>
                   <div className="relative overflow-hidden rounded-[30px] bg-black/5">
-                    <div className="relative h-[340px] w-full sm:h-[420px] lg:h-[480px]">
+                    <div className="relative h-[480px] w-full sm:h-[480px] lg:h-[480px]">
                       <Image
                         src={member.image}
                         alt={member.name}

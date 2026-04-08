@@ -6,23 +6,23 @@ import StaggerGroup from "@/components/animations/StaggerGroup";
 const services = [
   {
     id: 1,
-    title: "Web Wise Solutions",
+    title: "Business Websites",
     description:
-      "A digital agency specializes in creating online strategies for businesses",
+      "Professional, fast, and mobile-ready websites built to represent your brand.",
     icon: MonitorSmartphone,
   },
   {
     id: 2,
-    title: "Social Brilliance Studio",
+    title: "Landing Pages",
     description:
-      "A digital agency specializes in creating online strategies for businesses",
+      "Conversion-focused pages for ads, launches, and lead generation.",
     icon: Globe,
   },
   {
     id: 3,
-    title: "Digital Evolution Lab",
+    title: "Custom Web Apps",
     description:
-      "A digital agency specializes in creating online strategies for businesses",
+      "Scalable web applications that automate workflows and operations.",
     icon: Mic,
   },
 ];
@@ -32,7 +32,7 @@ export default function ServicesSection() {
     <section className="w-full py-10 sm:py-14 px-4  md:px-10 lg:px-16 ">
       <Reveal className="mb-20 text-center" variant="fadeUp">
         <h1 className="text-4xl font-bold uppercase leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-[3.8rem]">
-          Our Service
+          Services Built For Growth
         </h1>
       </Reveal>
       <StaggerGroup className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
@@ -56,7 +56,7 @@ export default function ServicesSection() {
                   </p>
 
                   <div className="mx-auto mt-10 inline-flex items-center gap-3 text-xl font-medium text-[#2f2f2f] transition-colors duration-300 group-hover:text-white sm:mt-12">
-                    <span>Read More</span>
+                    <span>Explore Service</span>
                     <ArrowRight className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </article>

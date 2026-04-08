@@ -20,10 +20,10 @@ export default function RecentBlogSection() {
       const categories = [...new Set(blogs.map((blog) => blog.category))]
   return (
     <section className="w-full px-4 md:px-10 lg:px-16 py-12  lg:py-16">
-      <div className="mx-auto max-w-7xl pb-56">
+      <div className="mx-auto max-w-7xl ">
         <Reveal className="mb-10 text-center sm:mb-12 lg:mb-14">
           <h1 className="mb-20 text-center text-4xl font-bold uppercase leading-[1.1] tracking-tight text-slate-950 sm:text-5xl md:text-6xl lg:text-[3.9rem]">
-            Our Recent Blog
+            Insights From Weboraz
           </h1>
         </Reveal>
 

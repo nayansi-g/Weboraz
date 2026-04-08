@@ -13,24 +13,24 @@ import {
 const testimonials = [
   {
     id: 1,
-    name: "Prince Gupta",
-    role: "Designer",
+    name: "Ananya Rao",
+    role: "Founder, Clinic",
     rating: 4,
-    text: "A Digital Agency Specializes In A Creating Strategies For Businesses To Optimize Their Presence The The Best Internet Ever",
+    text: "Weboraz delivered a clean, professional website that patients trust. The process was clear and the results were immediate.",
   },
   {
     id: 2,
-    name: "Kriti jadhav",
-    role: "Marketing Manager",
+    name: "Rohit Mehta",
+    role: "Operations Manager",
     rating: 5,
-    text: "A Creative Team Helped Our Brand Build A Strong Online Presence With Smart Strategy, Beautiful Design, And Great Communication",
+    text: "They built a fast landing page that improved our lead quality and gave us a clear system for updates.",
   },
   {
     id: 3,
-    name: "Riya Kumari",
-    role: "Business Owner",
+    name: "Sara Iqbal",
+    role: "Startup CEO",
     rating: 4,
-    text: "Their Work Was Clean, Modern, And Effective. They Understood Our Goals And Turned Our Ideas Into A Powerful Digital Experience",
+    text: "Weboraz translated our product vision into a modern web app that feels premium and works flawlessly.",
   },
 ];
 

@@ -84,7 +84,7 @@ function PersonShowcase() {
       <div className="relative z-10 flex w-full items-end justify-center">
         <Image
           src="/men_image.png"
-          alt="Agency hero image"
+          alt="Weboraz hero"
           width={450}
           height={500}
           priority
@@ -97,64 +97,69 @@ function PersonShowcase() {
 
 export default function Hero() {
   return (
-    <section className="relative  overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 pt-24  sm:px-6  lg:px-8  overflow-y-hidden">
-        <div className="grid items-end  gap-10 lg:grid-cols-[1fr_minmax(320px,560px)_1fr] overflow-y-hidden lg:gap-6 ">
-          
-          {/* Left Content */}
-          <div className="order-2 mb-0 lg:mb-20 flex flex-col items-center justify-end gap-6 text-center lg:order-1 lg:items-start lg:text-left">
+    <section className="relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 pt-36 sm:px-6 lg:px-8">
+
+        {/* 🔹 TOP HEADING */}
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-5 inline-flex items-center rounded-full bg-[#CFFF92] px-4 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-emerald-900">
+            Weboraz Studio
+          </div>
+
+          <h1 className="flex flex-col items-center font-bold uppercase tracking-tight text-slate-900">
+            <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
+              Websites & Web Apps
+            </span>
+            <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
+              Built For Growth
+            </span>
+          </h1>
+        </div>
+
+        {/* 🔹 3 GRID BELOW */}
+        <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1fr_minmax(320px,560px)_1fr] lg:gap-6">
+
+          {/* LEFT */}
+          <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <p className="max-w-sm text-sm leading-6 text-slate-700 sm:max-w-md sm:text-base">
-              A digital agency specializes in creating online strategies for
-              businesses to optimize their presence on the internet services.
+              Weboraz designs and builds modern websites and web apps that help
+              businesses look professional, load fast, and convert visitors.
             </p>
 
             <a
-              href="#about"
-              className="inline-flex items-center gap-2 rounded-full border border-emerald-900 px-5 py-3 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-950 hover:text-white sm:px-6"
+              href="/about"
+              className="inline-flex items-center gap-2 rounded-full border border-emerald-900 px-5 py-3 text-sm font-medium text-emerald-950 hover:bg-emerald-950 hover:text-white"
             >
-              <span>More About Us</span>
-              <ArrowIcon />
+              About Weboraz <ArrowIcon />
             </a>
           </div>
 
-          {/* Center Content */}
-          <div className="order-1 flex flex-col items-center text-center lg:order-2">
-            <div className="mb-5 inline-flex items-center rounded-full bg-[#CFFF92] px-4 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-emerald-900 sm:mb-6 sm:px-5 sm:text-[12px] md:text-[13px]">
-              Digital Agency
-            </div>
-
-            <h1 className="max-w-3xl text-balance text-4xl font-bold uppercase leading-[1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-[4.3rem]">
-              Digital Agency Specializes
-            </h1>
-
-            <div className="mt-6 hidden md:block sm:mt-8 w-full">
-              <PersonShowcase />
-            </div>
+          {/* CENTER IMAGE */}
+          <div className="flex hidden md:block justify-center">
+            <PersonShowcase />
           </div>
 
-          {/* Right Content */}
-          <div className="order-3 mb-10 lg:mb-20 flex flex-col items-center gap-6 text-center lg:items-end lg:text-right">
-            <div className="flex h-32 w-32 flex-col items-center justify-center rounded-full bg-[#ffe45c] text-slate-950 shadow-lg shadow-yellow-200/60 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48">
+          {/* RIGHT */}
+          <div className="flex flex-col pb-10 md:pb-0 items-center  gap-6 text-center lg:items-end lg:text-right">
+            <div className="flex h-32 w-32 flex-col items-center justify-center rounded-full bg-[#ffe45c] shadow-lg">
               <SparkIcon />
-              <div className="mt-2 text-3xl font-bold sm:text-4xl">3K+</div>
-              <p className="mt-1 text-[11px] font-medium text-slate-700 sm:text-sm">
-                Websites Launched
-              </p>
+              <div className="mt-2 text-3xl font-bold">100+</div>
+              <p className="text-xs">Projects Delivered</p>
             </div>
 
-            <div className="flex flex-col items-center lg:items-end">
-              <div className="flex -space-x-3">
+            <div>
+              <div className="flex -space-x-3 justify-center lg:justify-end">
                 <Avatar bgClass="bg-rose-200" label="A" />
                 <Avatar bgClass="bg-amber-200" label="B" />
                 <Avatar bgClass="bg-sky-200" label="C" />
-                <Avatar bgClass="bg-stone-200" label="D" />
               </div>
 
-              <p className="mt-4 max-w-[220px] text-sm font-semibold leading-6 text-slate-950 sm:text-base sm:leading-7">
-                They Are The Best Team Members In Our Team
+              <p className="mt-4 max-w-[220px] text-sm font-semibold">
+                Strategy, design, and development in one team
               </p>
             </div>
           </div>
+
         </div>
       </div>
 

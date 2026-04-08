@@ -32,9 +32,9 @@ function DoubleChevron() {
 
 
 const bulletItems = [
-  "Transforming Visions into Digital Reality",
-  "Unleash Your Digital Potential Connecting Brands",
-  "Your Business, Our Digital Expertise Pioneering",
+  "Business websites that build trust and credibility",
+  "High-converting landing pages for growth campaigns",
+  "Custom web apps that streamline operations",
 ];
 
 export default function AboutSection() {
@@ -45,49 +45,50 @@ export default function AboutSection() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="mb-6 flex items-center gap-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-950 sm:text-xs">
-                About Us
+                About Weboraz
               </span>
               <span className="h-px w-12 bg-emerald-900" />
             </div>
 
-            <Reveal className="max-w-3xl" delay={0.04}>
+            <div className="max-w-3xl" >
               <h2 className="text-balance text-4xl font-bold uppercase leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-[4.1rem]">
-                Digital Excellence Of Our Digital
+                Modern Websites Built
+                For Business Growth
               </h2>
-            </Reveal>
+            </div>
           </div>
 
           <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-            <Reveal className="group overflow-hidden rounded-[80px]" variant="slideRight">
+            <div className="group overflow-hidden rounded-[80px]">
               <Image
                 src="/about-img.jpg"
                 width={500}
                 height={400}
-                alt="Creative team collaborating in the office"
+                alt="Weboraz team collaborating"
                 className="h-auto w-full rounded-[80px] transition duration-500 group-hover:scale-[1.03]"
               />
-            </Reveal>
+            </div>
 
             <div className="flex flex-col justify-center">
-              <Reveal delay={0.08} variant="slideLeft">
+              <div delay={0.08} variant="slideLeft">
                 <p className="max-w-xl text-md leading-7 text-slate-600 sm:text-lg">
-                  A digital agency specializes in creating online strategies for
-                  businesses to optimize their presence on the internet. A digital
-                  agency specializes in creating online strategies for businesses to
-                  optimize.
+                  Weboraz helps startups, clinics, institutions, and growing businesses
+                  launch professional websites and web applications. We combine clean
+                  design, responsive development, and business-first strategy to deliver
+                  digital experiences that convert.
                 </p>
-              </Reveal>
+              </div>
 
               <div className="mt-8 space-y-4">
                 {bulletItems.map((item, index) => (
-                  <Reveal key={item} delay={0.12 + index * 0.05}>
+                  <div key={item} delay={0.12 + index * 0.05}>
                     <div className="flex gap-3">
                       <DoubleChevron />
                       <p className="text-xl font-semibold leading-7 text-slate-800">
                         {item}
                       </p>
                     </div>
-                  </Reveal>
+                  </div>
                 ))}
               </div>
             </div>

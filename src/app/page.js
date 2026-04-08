@@ -8,6 +8,7 @@ import TeamMemberSection from "@/components/TeamMember";
 import TestimonialSection from "@/components/Testimonials";
 import ContactFaqSection from "@/components/Contact";
 import RecentBlogSection from "@/components/BlogSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <TeamMemberSection />
       <TestimonialSection />
       <ContactFaqSection />
+      <WhyChooseUs />
      
       <RecentBlogSection />
     </main>

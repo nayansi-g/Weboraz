@@ -3,6 +3,7 @@ import { MoveLeft, MoveUpRight } from "lucide-react"
 import blogData from "../../../../Blog.json"
 
 import DOMPurify from 'isomorphic-dompurify';
+import BannerHero from "@/components/BannerHero";
 
 const formatDate = (dateString) =>
   new Intl.DateTimeFormat("en-US", {
@@ -51,21 +52,22 @@ export default async function BlogDetailsPage({ params }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "TubeHelper",
+      name: "Weboraz",
       logo: {
         "@type": "ImageObject",
-        url: "https://tubehelper.in/favicon.ico",
+        url: "https://www.weboraz.com/favicon.ico",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://tubehelper.in/blog/${blog.slug}`,
+      "@id": `https://www.weboraz.com/blog/${blog.slug}`,
     },
-    image: [`https://tubehelper.in${blog.image}`],
+    image: [`https://www.weboraz.com${blog.image}`],
   }
 
   return (
     <main className="bg-[#F5F6F4] text-gray-900">
+        <BannerHero heading="Article" pagename="Insights" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -116,15 +118,15 @@ export default async function BlogDetailsPage({ params }) {
         </div>
 
         <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm md:p-7">
-          <h2 className="text-2xl font-semibold">Need Help Applying This Strategy?</h2>
+          <h2 className="text-2xl font-semibold">Need Help Applying This-</h2>
           <p className="mt-4 text-gray-700">
-            If you want expert support to implement this for your business, our team can build a structured plan around performance marketing, conversion optimization, analytics, and long-term growth systems.
+            If you want help applying this to your website or web app, our team can build a clear plan and execute the build.
           </p>
           <Link
             href="/contact"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#004B2D] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
           >
-            Book Your Strategy Call
+            Book a Consultation
             <MoveUpRight className="h-4 w-4" />
           </Link>
         </div>

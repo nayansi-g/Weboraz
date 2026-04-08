@@ -11,27 +11,27 @@ import { EASE_OUT, tapPress } from "@/lib/animations/variants";
 const faqData = [
   {
     id: 1,
-    question: "What services do digital agencies provide?",
+    question: "What does Weboraz build?",
     answer:
-      "A digital agency specializes in creating online strategies for businesses to optimize their presence on the internet. A digital agency specializes in creating.",
+      "We create business websites, landing pages, ecommerce sites, and custom web applications tailored to your goals.",
   },
   {
     id: 2,
-    question: "How long does it take for a designed?",
+    question: "How long does a website take?",
     answer:
-      "Project timelines depend on the scope, features, revisions, and content readiness. A simple website may take a few days, while a larger custom project can take several weeks.",
+      "Timelines depend on scope and content readiness. Most business websites take 2 to 4 weeks, while web apps take longer.",
   },
   {
     id: 3,
-    question: "What is the importance of a business?",
+    question: "Do you work with startups and local businesses?",
     answer:
-      "A strong business presence helps build trust, improve visibility, attract customers, and support long-term growth through better branding and communication.",
+      "Yes. We work with startups, clinics, institutions, and growing companies that need a strong online presence.",
   },
   {
     id: 4,
-    question: "How do I choose business's success?",
+    question: "Can you redesign an existing website?",
     answer:
-      "You can measure success through goals like leads, conversions, engagement, revenue growth, and how effectively your brand connects with the right audience.",
+      "Absolutely. We can refresh your design, improve performance, and rebuild the site for better results.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function ContactFaqSection() {
           <StaggerGroup className="rounded-[24px] bg-[#f4f4f4] p-5 sm:p-6 md:p-8 lg:rounded-[28px]">
             <Reveal>
               <h2 className="text-3xl font-semibold tracking-[-0.03em] text-black sm:text-4xl md:text-[48px]">
-                Get In Touch
+                Start Your Project
               </h2>
             </Reveal>
 
@@ -67,7 +67,7 @@ export default function ContactFaqSection() {
                 <Reveal delay={0.04}>
                   <input
                     type="email"
-                    placeholder="Your Email"
+                    placeholder="Company Name"
                     className="h-14 w-full rounded-full border border-black/15 bg-transparent px-6 text-sm text-black outline-none transition-colors placeholder:text-black/45 focus:border-black/30"
                   />
                 </Reveal>
@@ -76,7 +76,7 @@ export default function ContactFaqSection() {
               <Reveal delay={0.06}>
                 <input
                   type="text"
-                  placeholder="Your Email"
+                  placeholder="Project Type (Website, Web App, Ecommerce)"
                   className="h-14 w-full rounded-full border border-black/15 bg-transparent px-6 text-sm text-black outline-none transition-colors placeholder:text-black/45 focus:border-black/30"
                 />
               </Reveal>
@@ -84,7 +84,7 @@ export default function ContactFaqSection() {
               <Reveal delay={0.08}>
                 <textarea
                   rows={6}
-                  placeholder="Message here.."
+                  placeholder="Tell us about your goals and timeline"
                   className="min-h-[150px] w-full resize-none rounded-[22px] border border-black/15 bg-transparent px-6 py-5 text-sm text-black outline-none transition-colors placeholder:text-black/45 focus:border-black/30 sm:min-h-[170px]"
                 />
               </Reveal>
@@ -95,7 +95,7 @@ export default function ContactFaqSection() {
                     type="submit"
                     className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-[#004b2d] px-9 text-sm font-semibold text-white transition hover:opacity-90"
                   >
-                    Sent Now
+                    Send Request
                     <ArrowRight size={18} />
                   </button>
                 </Interactive>
@@ -106,9 +106,9 @@ export default function ContactFaqSection() {
           {/* Right FAQ */}
           <StaggerGroup className="px-1 pt-2 sm:px-2 lg:px-0 lg:pt-1">
             <Reveal variant="slideLeft">
-              <h2 className="text-4xl font-bold uppercase leading-none tracking-[-0.04em] text-black sm:text-5xl md:text-6xl lg:text-[72px]">
-                Ask Question
-              </h2>
+            <h2 className="text-4xl font-bold uppercase leading-none tracking-[-0.04em] text-black sm:text-5xl md:text-6xl lg:text-[72px]">
+              Frequently Asked
+            </h2>
             </Reveal>
 
             <div className="mt-8 space-y-4 sm:mt-10">

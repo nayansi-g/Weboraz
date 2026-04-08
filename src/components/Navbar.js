@@ -47,7 +47,7 @@ export default function Navbar() {
               Weboraz
             </p>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#5f7480]">
-              Digital Agency
+              Web Solutions
             </p>
           </div>
         </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
             href="/blog"
             className="flex items-center gap-1 text-[17px] font-medium text-[#1f1f1f] transition hover:text-green-700"
           >
-            Blogs
+            Insights
           </Link>
 
           <Link
@@ -98,7 +98,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/book_a_demo"
             className="text-[17px] font-medium text-white bg-[#004B2D]  hover:text-white rounded-full px-5 py-2.5 transition"
           >
             Book a Free Demo
@@ -141,16 +141,16 @@ export default function Navbar() {
             Projects
           </Link>
           <Link
-            href="/pages"
+            href="/about"
             className="border-b border-black/10 py-3 text-base font-medium text-[#1f1f1f]"
           >
-            Pages
+            About
           </Link>
           <Link
             href="/blog"
             className="border-b border-black/10 py-3 text-base font-medium text-[#1f1f1f]"
           >
-            Blog
+            Insights
           </Link>
           <Link
             href="/contact"

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { MoveUpRight } from "lucide-react"
 import blogData from "../../../Blog.json"
+import BannerHero from "@/components/BannerHero"
 
 
 const formatDate = (dateString) =>
@@ -12,26 +13,27 @@ const formatDate = (dateString) =>
 
 export default function BlogPage() {
   const blogs = blogData.blogs || []
-  const featuredBlogs = blogs.filter((blog) => blog.featured)
-  const latestBlogs = blogs.filter((blog) => !blog.featured)
+  const featuredInsights = blogs.filter((blog) => blog.featured)
+  const latestInsights = blogs.filter((blog) => !blog.featured)
   const categories = [...new Set(blogs.map((blog) => blog.category))]
 
   return (
     <main className="bg-[#F5F6F4] text-gray-900">
+        <BannerHero heading="Insights" pagename="Insights" />
       <section className=" px-4 pb-12  text-center sm:px-6 md:rounded-b-[80px] md:pb-16 pt-32">
         <div className="mx-auto max-w-5xl">
           <h1 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-            Digital Marketing Blog for Ecommerce Growth and Performance
+            Web Design & Web App Insights for Growing Businesses
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-gray-700">
-            Explore actionable insights on ecommerce growth, performance marketing, SEO, conversion optimization, analytics, and automation.
+            Explore practical guidance on websites, landing pages, web apps, performance, and user experience.
           </p>
-          <a   href="https://wa.me/919897165137"
+          <a   href="https://wa.me/919000000000"
   target="_blank"
   rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#004B2D] px-7 py-3 text-sm font-medium text-white transition hover:opacity-90"
           >
-            Book Your Free Strategy Call
+            Book a Consultation
             <MoveUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -39,7 +41,7 @@ export default function BlogPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-8 pt-12 sm:px-6 md:pt-14">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm md:p-7">
-          <h2 className="text-2xl font-semibold md:text-3xl">Blog Categories</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">Topics</h2>
           <div className="mt-5 flex flex-wrap gap-2">
             {categories.map((category) => (
               <span
@@ -56,11 +58,11 @@ export default function BlogPage() {
       <section className="mx-auto max-w-6xl px-4 pb-6 pt-4 sm:px-6">
         <div className="mb-5 flex items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold md:text-3xl">Featured Articles</h2>
-          <p className="text-sm text-gray-600">Editor-picked growth guides</p>
+          <p className="text-sm text-gray-600">Editor-picked web growth guides</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredBlogs.map((blog) => (
+          {featuredInsights.map((blog) => (
             <article key={blog.id} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <div className="mb-4 overflow-hidden rounded-xl bg-gray-100">
                 <div className="aspect-[16/9] w-full">
@@ -97,11 +99,11 @@ export default function BlogPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 md:pb-54">
         <div className="mb-5 flex items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold md:text-3xl">Latest Articles</h2>
-          <p className="text-sm text-gray-600">Fresh ecommerce growth insights</p>
+          <p className="text-sm text-gray-600">Fresh insights on building better websites</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {latestBlogs.map((blog) => (
+          {latestInsights.map((blog) => (
             <article key={blog.id} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <div className="mb-4 overflow-hidden rounded-xl bg-gray-100">
                 <div className="aspect-[16/9] w-full">
