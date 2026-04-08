@@ -1,9 +1,10 @@
-"use client"
-
 import { Send } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTimes, FaYoutube } from "react-icons/fa"
+import Reveal from "@/components/animations/Reveal"
+import StaggerGroup from "@/components/animations/StaggerGroup"
+import Interactive from "@/components/animations/Interactive"
 
 const quickLinks = {
   company: [
@@ -38,11 +39,13 @@ export default function Footer() {
 
 
       <div className="relative z-10 mx-auto bg-[#0b3d2e] pb-6 px-4 sm:px-6 md:px-8 pt-38  sm:pt-48 md:pt-44 md:pb-8  w-full">
-        <h2 className="mb-8 text-2xl font-semibold sm:text-3xl md:mb-10 md:text-4xl">
-          Let&apos;s Build Something Great
-        </h2>
+        <Reveal>
+          <h2 className="mb-8 text-2xl font-semibold sm:text-3xl md:mb-10 md:text-4xl">
+            Let&apos;s Build Something Great
+          </h2>
+        </Reveal>
 
-        <div className="grid gap-8 border-t border-white/10 pt-4 sm:pt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <StaggerGroup className="grid gap-8 border-t border-white/10 pt-4 sm:pt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
              <div className="space-y-2">
              <Link href="/" className="flex items-center">
                          <div className="flex items-center justify-start">
@@ -73,26 +76,27 @@ export default function Footer() {
           <FooterColumn title="Resources" links={quickLinks.resources} />
          <FooterColumn title="Company" links={quickLinks.company} />
           <FooterColumn title="Legal" links={quickLinks.legal} />
-        </div>
+        </StaggerGroup>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 sm:mt-12 md:flex-row md:items-center">
           
           <div className="flex gap-2 sm:gap-3">
             {[FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTimes].map((Icon, i) => (
+              <Interactive key={i} hover="grow">
               <button
-                key={i}
                 className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/5 transition hover:bg-white/10 sm:h-9 sm:w-9"
                 aria-label="social link"
               >
                 <Icon className="text-sm" />
               </button>
+              </Interactive>
             ))}
           </div>
           <p className="text-sm text-gray-500">Weboraz (c) 2026. All rights reserved.</p>
         </div>
       </div>
       <div className="absolute  left-1/2 top-30 z-20  w-full max-w-6xl -translate-x-1/2 -translate-y-[35%] px-4 sm:px-8 lg:px-16">
-        <div className="rounded-2xl bg-white px-5 py-6 border-1 border-gray-200 shadow-xl sm:px-8 sm:py-8 lg:px-12 lg:py-10">
+        <Reveal className="rounded-2xl bg-white px-5 py-6 border-1 border-gray-200 shadow-xl sm:px-8 sm:py-8 lg:px-12 lg:py-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <h2 className="max-w-2xl text-2xl font-medium leading-snug text-gray-800 sm:text-3xl lg:text-4xl xl:text-[45px]">
               Get Weboraz Insights and Web Launch Tips
@@ -113,7 +117,7 @@ export default function Footer() {
               </button>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </footer>
   )
@@ -121,6 +125,7 @@ export default function Footer() {
 
 function FooterColumn({ title, links }) {
   return (
+    <Reveal>
     <div>
       <h4 className="mb-4 font-semibold">{title}</h4>
       <ul className="space-y-3 text-sm text-gray-400">
@@ -133,5 +138,6 @@ function FooterColumn({ title, links }) {
         ))}
       </ul>
     </div>
+    </Reveal>
   )
 }

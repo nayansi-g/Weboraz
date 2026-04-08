@@ -121,7 +121,7 @@ export default function About() {
           <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] lg:h-full lg:min-h-[560px]">
             <Image
               src="/team-meeting.jpg"
-              alt="Person working on laptop"
+              alt="Weboraz team collaborating on a website project"
               width={700}
               height={900}
               className="h-[320px] w-full object-cover sm:h-[420px] md:h-[520px] lg:h-full"

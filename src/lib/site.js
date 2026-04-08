@@ -8,8 +8,8 @@ export const clinic = {
   telephoneHref: "tel:+919000000000",
   priceRange: "$$",
   description:
-    "Weboraz is a digital agency that helps businesses grow with business websites, custom web applications, landing pages, dashboards, e-commerce development, booking systems, and scalable digital solutions.",
-  tagline: "Modern websites and custom web apps built for business growth.",
+    "Weboraz builds modern business websites, landing pages, ecommerce sites, and custom web applications designed for speed, trust, and growth.",
+  tagline: "Modern websites and web apps built for business growth.",
   availability: "Monday to Saturday",
   responseTime: "Replies within 24 hours",
   deliveryModel: "Remote-first delivery for startups and growing businesses",
@@ -37,18 +37,17 @@ export const primaryNav = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Blog", href: "/blog" },
+  { name: "Insights", href: "/blog" },
   { name: "Contact", href: "/contact" },
   { name: "FAQ", href: "/faq" },
 ];
 
 export const serviceLinks = [
-  { name: "Business Websites", href: "/services#services-list" },
-  { name: "Custom Web Apps", href: "/services#services-list" },
-  { name: "E-commerce Stores", href: "/services#services-list" },
-  { name: "Landing Pages", href: "/services#services-list" },
-  { name: "Dashboards & Admin Panels", href: "/services#services-list" },
-  { name: "Website Redesign", href: "/services#services-list" },
+  { name: "Business Websites", href: "/services#business-websites" },
+  { name: "Custom Web Apps", href: "/services#web-applications" },
+  { name: "Ecommerce Websites", href: "/services#ecommerce-websites" },
+  { name: "Landing Pages", href: "/services#landing-pages" },
+  { name: "Website Redesign", href: "/services#website-redesign" },
 ];
 
 export const homepageKeywords = [

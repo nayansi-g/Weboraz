@@ -18,7 +18,7 @@ export default function CTA() {
         <div className="relative min-h-[280px] sm:min-h-[380px] md:min-h-[500px] lg:min-h-full" variant="slideRight">
           <Image
             src="/team-meeting.jpg"
-            alt="Team meeting"
+            alt="Weboraz team planning a website project"
             fill
             priority
             className="object-cover"

@@ -12,6 +12,7 @@ import {
   Workflow,
 } from "lucide-react";
 import BannerHero from "@/components/BannerHero";
+import { serviceSchema } from "@/lib/site";
 import ContactFaqSection from "@/components/Contact";
 
 const services = [
@@ -96,6 +97,10 @@ export default function ServicesGridSection() {
   return (
     <div className="bg-[#F5F6F4]">
          <BannerHero heading="Our Services" pagename="Services" />
+         <script
+           type="application/ld+json"
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema(services)) }}
+         />
     <section
       id="services-list"
       className="bg-[#F5F6F4] px-4 py-10  sm:py-12 md:px-10 lg:px-16 xl:py-16"

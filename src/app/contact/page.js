@@ -1,4 +1,5 @@
 import BannerHero from "@/components/BannerHero";
+import { faqSchema } from "@/lib/site";
 import { Mail, MapPin, Phone, ChevronDown, ArrowRight, PhoneOutgoing, MoveUpRight } from "lucide-react";
 
 export default function ContactSection() {
@@ -32,6 +33,10 @@ const services = [
   return (
    <div className="bg-[#F5F6F4]"> 
     <BannerHero heading="Contact Us" pagename="Contact" />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs.map((item) => ({ question: item.q, answer: item.a })))) }}
+    />
 
      <section className="px-4  text-center sm:px-6 md:px-10 lg:px-16 pt-8 md:pt-10 lg:pt-16 ">
         <div className="mx-auto max-w-7xl">
@@ -56,7 +61,7 @@ const services = [
         <div className="relative min-h-[380px] overflow-hidden rounded-[24px] sm:min-h-[500px] lg:min-h-[560px]">
           <img
             src="/team-meeting.jpg"
-            alt="Office workspace"
+            alt="Weboraz team workspace"
             className="absolute inset-0 h-full w-full object-cover"
           />
 

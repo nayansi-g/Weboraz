@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Reveal from "@/components/animations/Reveal";
+import StaggerGroup from "@/components/animations/StaggerGroup";
+import Interactive from "@/components/animations/Interactive";
 
 function SparkIcon() {
   return (
@@ -98,49 +101,46 @@ function PersonShowcase() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 pt-36 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-26 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-5 inline-flex items-center rounded-full bg-[#CFFF92] px-4 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-emerald-900">
+              Weboraz Studio
+            </div>
 
-        {/* 🔹 TOP HEADING */}
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-5 inline-flex items-center rounded-full bg-[#CFFF92] px-4 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-emerald-900">
-            Weboraz Studio
+            <h1 className="flex flex-col items-center font-bold uppercase tracking-tight text-slate-900">
+              <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
+                Websites & Web Apps
+              </span>
+              <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
+                Built For Growth
+              </span>
+            </h1>
           </div>
+        </Reveal>
 
-          <h1 className="flex flex-col items-center font-bold uppercase tracking-tight text-slate-900">
-            <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
-              Websites & Web Apps
-            </span>
-            <span className="block text-[26px] leading-[1] sm:text-[40px] md:text-[50px] lg:text-[60px]">
-              Built For Growth
-            </span>
-          </h1>
-        </div>
-
-        {/* 🔹 3 GRID BELOW */}
-        <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1fr_minmax(320px,560px)_1fr] lg:gap-6">
-
-          {/* LEFT */}
-          <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+        <StaggerGroup className="mt-6 grid items-center gap-10 lg:grid-cols-[1fr_minmax(320px,560px)_1fr] lg:gap-6">
+          <Reveal className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <p className="max-w-sm text-sm leading-6 text-slate-700 sm:max-w-md sm:text-base">
               Weboraz designs and builds modern websites and web apps that help
               businesses look professional, load fast, and convert visitors.
             </p>
 
-            <a
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-emerald-900 px-5 py-3 text-sm font-medium text-emerald-950 hover:bg-emerald-950 hover:text-white"
-            >
-              About Weboraz <ArrowIcon />
-            </a>
-          </div>
+            <Interactive hover="grow">
+              <a
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-900 px-5 py-3 text-sm font-medium text-emerald-950 hover:bg-emerald-950 hover:text-white"
+              >
+                About Weboraz <ArrowIcon />
+              </a>
+            </Interactive>
+          </Reveal>
 
-          {/* CENTER IMAGE */}
-          <div className="flex hidden md:block justify-center">
+          <Reveal className="flex hidden md:block justify-center" delay={0.05}>
             <PersonShowcase />
-          </div>
+          </Reveal>
 
-          {/* RIGHT */}
-          <div className="flex flex-col pb-10 md:pb-0 items-center  gap-6 text-center lg:items-end lg:text-right">
+          <Reveal className="flex flex-col pb-10 md:pb-0 items-center  gap-6 text-center lg:items-end lg:text-right" delay={0.1}>
             <div className="flex h-32 w-32 flex-col items-center justify-center rounded-full bg-[#ffe45c] shadow-lg">
               <SparkIcon />
               <div className="mt-2 text-3xl font-bold">100+</div>
@@ -158,9 +158,8 @@ export default function Hero() {
                 Strategy, design, and development in one team
               </p>
             </div>
-          </div>
-
-        </div>
+          </Reveal>
+        </StaggerGroup>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 h-1 bg-lime-300" />

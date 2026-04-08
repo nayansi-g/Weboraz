@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationProvider from "@/components/animations/AnimationProvider";
 import ContactButtons from "@/components/ContactButtons";
+import PageTransition from "@/components/animations/PageTransition";
+import { buildMetadata, clinic, medicalBusinessSchema, websiteSchema } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,11 +17,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Weboraz | Modern Websites & Web Apps",
-  description:
-    "Weboraz builds modern business websites, landing pages, and custom web applications designed for growth.",
-};
+  description: clinic.description,
+  keywords: [
+    "business website design",
+    "web app development",
+    "landing page design",
+    "ecommerce website development",
+    "responsive web design",
+    "custom web solutions",
+  ],
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -28,9 +37,15 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([medicalBusinessSchema(), websiteSchema()]),
+          }}
+        />
         <AnimationProvider>
           <Navbar />
-          {children}
+          <PageTransition>{children}</PageTransition>
           <Footer />
           <ContactButtons />
         </AnimationProvider>

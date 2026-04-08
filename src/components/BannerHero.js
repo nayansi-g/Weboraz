@@ -7,7 +7,7 @@ export default function BannerHero({ heading, pagename }) {
     <section className="relative flex min-h-[340px] items-end overflow-hidden px-4 pb-10 pt-20 sm:px-6 md:min-h-[400px] md:px-8">
       <Image
         src="/about-img.jpg"
-        alt="page banner"
+        alt="Weboraz page banner"
         fill
         sizes="100vw"
         className="object-cover"
