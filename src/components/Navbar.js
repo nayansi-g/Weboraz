@@ -119,7 +119,7 @@ export default function Navbar() {
       <div
         className={`overflow-hidden transition-all duration-300 lg:hidden ${
           mobileMenuOpen ? "max-h-[500px] border-t border-black/10" : "max-h-0"
-        } ${isScrolled ? "bg-white" : "bg-red-100"}`}
+        } ${isScrolled ? "bg-white" : "bg-[#F5F6F4]"}`}
       >
         <nav className="flex flex-col px-4 py-4 sm:px-6">
           <Link
