@@ -12,7 +12,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Nayansi Gupta",
-    role: "Founder & Web Strategy",
+    role: "Founder & Full Stack Developer",
     image: "/Nayansi_Gupta.png",
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Satyam Gupta  ",
-    role: "Head of Development",
+    role: "Marketing Head",
     image: "/Satyam_Gupta.png",
   },
   
